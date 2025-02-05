@@ -8,7 +8,6 @@ export async function GET(request: NextRequest) {
     const videos = await prisma.video.findMany({
       orderBy: { createdAt: "desc" },
     });
-
     return NextResponse.json(videos);
   } catch (error) {
     return NextResponse.json(

@@ -56,6 +56,9 @@ function Home() {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Videos</h1>
+      {error && (
+        <div className="mb-4 p-2 bg-red-200 text-red-800 rounded">{error}</div>
+      )}
       {videos.length === 0 ? (
         <div className="text-center text-lg text-gray-500">
           No videos available
