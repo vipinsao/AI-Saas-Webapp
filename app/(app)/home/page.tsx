@@ -17,8 +17,8 @@ function Home() {
       } else {
         throw new Error("Unexpected response format");
       }
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      console.log(err);
       setError("Failed to fetch videos");
     } finally {
       setLoading(false);
@@ -43,8 +43,8 @@ function Home() {
     try {
       await axios.delete(`/api/videos/${id}`); // Send DELETE request to backend
       setVideos((prevVideos) => prevVideos.filter((video) => video.id !== id)); // Remove from frontend
-    } catch (error) {
-      console.error("Failed to delete video:", error);
+    } catch (err) {
+      console.error("Failed to delete video:", err);
       setError("Failed to delete video");
     }
   }, []);

@@ -48,6 +48,7 @@ function VideoUpload() {
         toast.success("File uploaded successfully!", {
           position: "top-right",
           autoClose: 3000,
+          onClose: () => router.push("/videos"),
         });
       } else {
         toast.warn("Unexpected response from the server.", {
