@@ -29,7 +29,7 @@ Here are some visuals showcasing the application's features:
 ![AI Processing](assets/final-processing.png)
 
 ## 🎥 Demonstration Video
-![Demo Video](assets/demo.mp4)
+![Demo Video](demo.mp4)
 
 ## 🏗️ Technical Stack
 - **Frontend Technologies:** HTML, Next.js, Daisy UI
