@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
@@ -9,7 +9,7 @@ export async function GET() {
       orderBy: { createdAt: "desc" },
     });
     return NextResponse.json(videos);
-  } catch (error) {
+  } catch (error: unknown) {
     return NextResponse.json(
       { error: "Error fetching videos" },
       { status: 500 }
