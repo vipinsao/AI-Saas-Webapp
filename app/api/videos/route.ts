@@ -10,6 +10,7 @@ export async function GET() {
     });
     return NextResponse.json(videos);
   } catch (error: unknown) {
+    console.error("Error fetching videos:", error);
     return NextResponse.json(
       { error: "Error fetching videos" },
       { status: 500 }
