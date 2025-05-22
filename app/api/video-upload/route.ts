@@ -21,7 +21,7 @@ interface CloudinaryUploadResult {
   public_id: string;
   bytes: number;
   duration?: number;
-  [key: string]: unknown;
+  [key: string]: number | string | unknown;
 }
 
 export async function POST(request: NextRequest) {
